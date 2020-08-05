@@ -11,17 +11,31 @@ const signUpFailure = function (response) {
 }
 
 const signInSuccess = function (response) {
+  store.user = response.user
   $('#message').text('You are signed in!')
   $('form').trigger('reset')
+//  $('#authenticated').show()
+  //$('#unauthenticated').hide()
 }
 
 const signInFailure = function (response) {
   $('#message').text('You did not sign in. Try again!')
 }
 
+const changePasswordSuccess = function (response) {
+  $('#message').text('You changed your password!')
+  $('form').trigger('reset')
+}
+
+const changePasswordFailure = function (response) {
+  $('#message').text('You did not change your password!')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
