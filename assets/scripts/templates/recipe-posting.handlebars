@@ -3,12 +3,16 @@
   <section data-id="{{recipe.id}}">
     <h6>Ingredient:</h6>
     <h3>
-      {{limit recipe.title 15}}
+      {{limit recipe.ingredent 15}}
     </h3>
     <h6>Temperature:</h6>
+    <p>{{recipe.temperature}}</p>
     <h6>Time:</h6>
+    <p>{{recipe.time}}</p>
     <h6>Fuel:</h6>
+    <p>{{recipe.fuel}}</p>
     <h6>Directions:</h6>
+    <p>{{recipe.directions}}</p>
     <button type="submit" class="btn btn-danger update-recipe">Update recipe</button>
     <!-- {{> partial}} -->
   </section>
