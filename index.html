@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>barbeQuery</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,15 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>barbeQuery</h1>
+      <p id="message">Sign up, but do not use your real email/password combination!</p>
+      <div id="unauthenticated">
+        <form id="sign-up" class="form">
+          <input name="credentials[email]" type="text" placeholder="email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+          <button type="submit">Sign up!</button>
+        </form>
+      </div>
     </body>
 </html>
