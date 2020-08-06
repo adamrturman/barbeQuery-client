@@ -21,6 +21,10 @@ const deleteRecipesSuccess = (id) => {
   $('#message').text('You deleted a recipe!')
 }
 
+const deleteRecipeFailure = (id) => {
+  $('#message').text('You can not delete that recipe because it is not yours!')
+}
+
 const failure = (error) => {
   console.error(error)
 }
@@ -29,5 +33,6 @@ module.exports = {
   getRecipesSuccess,
   createRecipesSuccess,
   deleteRecipesSuccess,
+  deleteRecipeFailure,
   failure
 }

@@ -28,7 +28,10 @@ const onDeleteRecipe = (event) => {
   api.deleteRecipes(recipeId)
     .then(ui.deleteRecipesSuccess)
     //  maybe also run onGetRecipes to "refresh the page?"
-    .catch(ui.failure)
+    .then(function () {
+      onGetRecipes(event)
+    })
+    .catch(ui.deleteRecipeFailure)
 }
 
 module.exports = {
