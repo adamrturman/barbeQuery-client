@@ -1,16 +1,16 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
   <section>
-    <h6>Ingredient:</h6>
-    <p>{{recipe.ingredient}}</p>
+    <h6 class="text-dark">Ingredient:</h6>
+    <p class="text-muted">{{recipe.ingredient}}</p>
     <h6>Temperature in &deg F:</h6>
-    <p>{{recipe.temperature}}</p>
+    <p class="text-muted">{{recipe.temperature}}</p>
     <h6>Time in hours:</h6>
-    <p>{{recipe.time}}</p>
+    <p class="text-muted">{{recipe.time}}</p>
     <h6>Fuel source:</h6>
-    <p>{{recipe.fuel}}</p>
+    <p class="text-muted">{{recipe.fuel}}</p>
     <h6>Directions:</h6>
-    <p>{{recipe.directions}}</p>
+    <p class="text-muted">{{recipe.directions}}</p>
     <button type="submit" class="btn btn-info update-recipe">Update recipe</button>
     <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete recipe</button>
   </section>
