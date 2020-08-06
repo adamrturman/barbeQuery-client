@@ -20,7 +20,19 @@ const onCreateRecipes = (event) => {
     .catch(ui.failure)
 }
 
+const onDeleteRecipe = (event) => {
+  event.preventDefault()
+  //const recipeId = $(event.target).closest('section').data('id')
+  const recipeId = $(event.target).data('id')
+  console.log(recipeId) // now is undefined rather than an empty string
+  api.deleteRecipes(recipeId)
+    .then(ui.deleteRecipesSuccess)
+    //  maybe also run onGetRecipes to "refresh the page?"
+    .catch(ui.failure)
+}
+
 module.exports = {
   onGetRecipes,
-  onCreateRecipes
+  onCreateRecipes,
+  onDeleteRecipe
 }

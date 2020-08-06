@@ -27,7 +27,19 @@ const createRecipes = function (formData) {
   })
 }
 
+const deleteRecipes = function (recipeId) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes/' + recipeId,
+    method: 'DELETE',
+    user: store.user
+  })
+}
+
 module.exports = {
   getRecipes,
-  createRecipes
+  createRecipes,
+  deleteRecipes
 }

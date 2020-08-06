@@ -5,7 +5,6 @@ const showRecipesTemplate = require('../templates/recipe-posting.handlebars')
 const getRecipesSuccess = (data) => {
   console.log(data.recipes)
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
-  console.log("This is showRecipesHtml", showRecipesHtml)
   $('.content').html(showRecipesHtml)
   $('#message').text('Here are your recipes!')
 
@@ -17,6 +16,10 @@ const createRecipesSuccess = (data) => {
   $('#message').text('You created a recipe!')
 }
 
+const deleteRecipesSuccess = (id) => {
+  $(`[data-id='${id}']`).remove()
+  $('#message').text('You deleted a recipe!')
+}
 
 const failure = (error) => {
   console.error(error)
@@ -25,5 +28,6 @@ const failure = (error) => {
 module.exports = {
   getRecipesSuccess,
   createRecipesSuccess,
+  deleteRecipesSuccess,
   failure
 }

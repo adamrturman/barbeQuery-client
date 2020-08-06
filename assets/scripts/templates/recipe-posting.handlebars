@@ -1,6 +1,6 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
-  <section data-id="{{recipe.id}}">
+  <section>
     <h6>Ingredient:</h6>
     <p>{{recipe.ingredient}}</p>
     <h6>Temperature:</h6>
@@ -11,7 +11,8 @@
     <p>{{recipe.fuel}}</p>
     <h6>Directions:</h6>
     <p>{{recipe.directions}}</p>
-    <button type="submit" class="btn btn-danger update-recipe">Update recipe</button>
+    <button type="submit" class="btn btn-info update-recipe">Update recipe</button>
+    <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete recipe</button>
   </section>
 
 {{/each}}
