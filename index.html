@@ -29,9 +29,10 @@
       </div>
       <div id="authenticated">
         <nav>
-          <div class="app-name"></div>
           <div class="nav-buttons">
+            <form id="get-recipes" class="form">
               <button id="getRecipesButton" class="btn btn-info mr-2">Get recipes!</button>
+            </form>
           </div>
     </nav>
         <form id="change-password" class="form">
@@ -43,11 +44,11 @@
           <button type="submit">Sign out!</button>
         </form>
         <form id="create-recipes" class="form">
-          <input name="ingredient" type="text" placeholder="ingredient">
-          <input name="temperature" type="number" placeholder="temperature">
-          <input name="time" type="number" placeholder="time">
-          <input name="fuel" type="text" placeholder="fuel">
-          <input name="directions" type="text" placeholder="directions">
+          <input name="recipe[ingredient]" type="text" placeholder="ingredient">
+          <input name="recipe[temperature]" type="number" placeholder="temperature">
+          <input name="recipe[time]" type="number" placeholder="time">
+          <input name="recipe[fuel]" type="text" placeholder="fuel">
+          <input name="recipe[directions]" type="text" placeholder="directions">
           <button id="createRecipesButton" class="btn btn-info mr-2">Create a recipe!</button>
         </form>
 

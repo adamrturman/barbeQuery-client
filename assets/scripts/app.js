@@ -13,6 +13,6 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#getRecipesButton').on('click', recipeEvents.onGetRecipes)
+  $('#get-recipes').on('submit', recipeEvents.onGetRecipes)
   $('#create-recipes').on('submit', recipeEvents.onCreateRecipes)
 })

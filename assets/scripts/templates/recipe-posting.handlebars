@@ -2,9 +2,7 @@
   {{log recipe}}
   <section data-id="{{recipe.id}}">
     <h6>Ingredient:</h6>
-    <h3>
-      {{limit recipe.ingredent 15}}
-    </h3>
+    <p>{{recipe.ingredient}}</p>
     <h6>Temperature:</h6>
     <p>{{recipe.temperature}}</p>
     <h6>Time:</h6>
@@ -14,7 +12,6 @@
     <h6>Directions:</h6>
     <p>{{recipe.directions}}</p>
     <button type="submit" class="btn btn-danger update-recipe">Update recipe</button>
-
   </section>
 
 {{/each}}

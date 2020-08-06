@@ -10,9 +10,8 @@ const getRecipes = function () {
     },
     url: config.apiUrl + '/recipes',
     method: 'GET',
-    data: {
-      recipes: []
-    }
+    user: store.user,
+    data: {}
   })
 }
 
@@ -23,6 +22,7 @@ const createRecipes = function (formData) {
     },
     url: config.apiUrl + '/recipes',
     method: 'POST',
+    user: store.user,
     data: formData
   })
 }
