@@ -7,8 +7,8 @@ const getRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   console.log("This is showRecipesHtml", showRecipesHtml)
   $('.content').html(showRecipesHtml)
-//  $('.content').html(showRecipesHtml)
-//  $('#message').text(JSON.stringify(data))
+  $('#message').text('Here are your recipes!')
+
 }
 const createRecipesSuccess = (data) => {
   console.log(data)
