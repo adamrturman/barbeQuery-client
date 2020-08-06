@@ -7,13 +7,16 @@ const getRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').html(showRecipesHtml)
   $('#message').text('Here are your recipes!')
-
 }
+
 const createRecipesSuccess = (data) => {
   console.log(data)
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').text(showRecipesHtml)
   $('#message').text('You created a recipe!')
+}
+const createRecipesFailure = (data) => {
+  $('#message').text('Double check your recipe and try again!')
 }
 
 const deleteRecipesSuccess = (id) => {
@@ -32,6 +35,7 @@ const failure = (error) => {
 module.exports = {
   getRecipesSuccess,
   createRecipesSuccess,
+  createRecipesFailure,
   deleteRecipesSuccess,
   deleteRecipeFailure,
   failure

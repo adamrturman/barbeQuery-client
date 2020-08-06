@@ -20,7 +20,7 @@ const onCreateRecipes = (event) => {
     .then(function () {
       onGetRecipes(event)
     })
-    .catch(ui.failure)
+    .catch(ui.createRecipesFailure)
 }
 
 const onDeleteRecipe = (event) => {
