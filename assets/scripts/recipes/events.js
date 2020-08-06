@@ -17,6 +17,9 @@ const onCreateRecipes = (event) => {
   const formData = getFormFields(form)
   api.createRecipes(formData)
     .then(ui.createRecipesSuccess)
+    .then(function () {
+      onGetRecipes(event)
+    })
     .catch(ui.failure)
 }
 
@@ -27,7 +30,6 @@ const onDeleteRecipe = (event) => {
   console.log(recipeId) // now is undefined rather than an empty string
   api.deleteRecipes(recipeId)
     .then(ui.deleteRecipesSuccess)
-    //  maybe also run onGetRecipes to "refresh the page?"
     .then(function () {
       onGetRecipes(event)
     })
