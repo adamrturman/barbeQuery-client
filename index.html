@@ -14,6 +14,7 @@
     <body>
       <h1>barbeQuery</h1>
       <p id="message">Sign up, but do not use your real email/password combination!</p>
+      <p id="message-2"></p>
       <div id="unauthenticated">
         <form id="sign-up" class="form">
           <input name="credentials[email]" type="text" placeholder="email">
@@ -36,7 +37,7 @@
         <form id="sign-out" class="button">
           <button type="submit">Sign out!</button>
         </form>
-        <h3>What are we making today?</h3>
+        <h3>Making a new recipe?</h3>
         <form id="create-recipes" class="form">
           <input name="recipe[ingredient]" type="text" placeholder="ingredient">
           <input name="recipe[temperature]" type="number" placeholder="temperature in &deg F">
@@ -44,6 +45,15 @@
           <input name="recipe[fuel]" type="text" placeholder="fuel source">
           <input name="recipe[directions]" type="text" placeholder="directions">
           <button id="createRecipesButton" class="btn btn-info mr-2">Create a recipe!</button>
+        </form>
+        <h3>Updating an existing recipe?</h3>
+        <form id="update-recipes">
+          <input name="recipe[ingredient]" type="text" placeholder="ingredient">
+          <input name="recipe[temperature]" type="number" placeholder="temperature in &deg F">
+          <input name="recipe[time]" type="number" placeholder="time in hours">
+          <input name="recipe[fuel]" type="text" placeholder="fuel source">
+          <input name="recipe[directions]" type="text" placeholder="directions">
+          <button type="submit" data-id="recipe._id" class="btn btn-info">Update recipe</button>
         </form>
         <h3>Want to see existing recipes?</h3>
         <form id="get-recipes" class="form">

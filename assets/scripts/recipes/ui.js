@@ -13,7 +13,7 @@ const createRecipesSuccess = (data) => {
   console.log(data)
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').text(showRecipesHtml)
-  $('#message').text('You created a recipe!')
+  $('#message-2').text('You created a recipe!')
 }
 const createRecipesFailure = (data) => {
   $('#message').text('Double check your recipe and try again!')
@@ -21,11 +21,22 @@ const createRecipesFailure = (data) => {
 
 const deleteRecipesSuccess = (id) => {
   $(`[data-id='${id}']`).remove()
-  $('#message').text('You deleted a recipe!')
+  $('#message-2').text('You deleted a recipe!')
 }
 
 const deleteRecipeFailure = (id) => {
   $('#message').text('You can not delete that recipe because it is not yours!')
+}
+
+const updateRecipesSuccess = () => {
+  console.log("This worked")
+  $('#message-2').text('You updated a recipe!')
+  $('form').trigger('reset')
+}
+
+const updateRecipesFailure = () => {
+  console.log("This did not work")
+  $('#message').text('You did not updated a recipe - try again!')
 }
 
 const failure = (error) => {
@@ -38,5 +49,7 @@ module.exports = {
   createRecipesFailure,
   deleteRecipesSuccess,
   deleteRecipeFailure,
+  updateRecipesSuccess,
+  updateRecipesFailure,
   failure
 }
