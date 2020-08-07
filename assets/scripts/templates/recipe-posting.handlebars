@@ -12,7 +12,10 @@
     <h6>Directions:</h6>
     <p class="text-muted">{{recipe.directions}}</p>
     <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete recipe</button>
-    <button type="click" data-id="{{recipe._id}}" class="btn btn-danger update-recipe">Update recipe</button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Update this recipe
+    </button>
   </section>
 
 {{/each}}
