@@ -14,6 +14,7 @@ const createRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').text(showRecipesHtml)
   $('#message-2').text('You created a recipe!')
+  $('form').trigger('reset')
 }
 const createRecipesFailure = (data) => {
   $('#message').text('Double check your recipe and try again!')
