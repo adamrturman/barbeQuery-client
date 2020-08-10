@@ -16,6 +16,7 @@ const createRecipesSuccess = (data) => {
   $('#message-2').text('You created a recipe!')
   $('form').trigger('reset')
 }
+
 const createRecipesFailure = (data) => {
   $('#message').text('Double check your recipe and try again!')
 }
@@ -29,15 +30,14 @@ const deleteRecipeFailure = (id) => {
   $('#message').text('You can not delete that recipe because it is not yours!')
 }
 
-const updateRecipesSuccess = () => {
-  console.log("This worked")
+const updateRecipesSuccess = (id) => {
   $('#message-2').text('You updated a recipe!')
   $('form').trigger('reset')
 }
 
 const updateRecipesFailure = () => {
-  console.log("This did not work")
-  $('#message').text('You did not updated a recipe - try again!')
+  $('#message').text('You did not update a recipe - try again!')
+  $('#message-2').text('')
 }
 
 const failure = (error) => {
