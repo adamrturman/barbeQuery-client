@@ -15,6 +15,18 @@ const getRecipes = function () {
   })
 }
 
+const getOneRecipe = function (id) {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/recipes/' + id,
+    method: 'GET',
+    user: store.user,
+    data: {}
+  })
+}
+
 const createRecipes = function (formData) {
   return $.ajax({
     headers: {
@@ -52,6 +64,7 @@ const updateRecipes = function (formData, recipeId) {
 
 module.exports = {
   getRecipes,
+  getOneRecipe,
   createRecipes,
   deleteRecipes,
   updateRecipes

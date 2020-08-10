@@ -1,9 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
 
+#title {
+  text-align: center;
+}
+
+
+#unauthenticated {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
 #authenticated {
   // visibility: hidden;
-  display: none;
-  padding: 20px
+  display: flex;
+  flex-flow: column;
+   padding: 20px;
+  align-items: center;
+  justify-content: center;
+  //display: flex;
 }
 
 
@@ -34,7 +52,8 @@ main {
       @include make-col(12);
     }
   //  background: $white;
-  color: black;
+  color: #323334;
+  font-size: 30px;
   text-shadow: 1px 1px rgba(0 , 0, 0, .25);
   justify-content: center;
   display: flex;

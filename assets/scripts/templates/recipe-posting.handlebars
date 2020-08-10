@@ -1,24 +1,25 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
   <section>
-    <h6 class="font-weight-bold">Ingredient:</h6>
+    <h3 class="font-weight-bold">Ingredient:</h3>
     <p class="font-weight-normal">{{recipe.ingredient}}</p>
-    <h6 class="font-weight-bold">Temperature in &deg F:</h6>
+    <h3 class="font-weight-bold">Ingredient ID:</h3>
+    <p class="font-weight-normal">{{recipe._id}}</p>
+    <h3 class="font-weight-bold">Temperature in &deg F:</h3>
     <p class="font-weight-normal">{{recipe.temperature}}</p>
-    <h6 class="font-weight-bold">Time in hours:</h6>
+    <h3 class="font-weight-bold">Time in hours:</h3>
     <p class="font-weight-normal">{{recipe.time}}</p>
-    <h6 class="font-weight-bold">Fuel source:</h6>
+    <h3 class="font-weight-bold">Fuel source:</h3>
     <p class="font-weight-normal">{{recipe.fuel}}</p>
-    <h6 class="font-weight-bold">Directions:</h6>
+    <h3 class="font-weight-bold">Directions:</h3>
     <p class="font-italic">{{recipe.directions}}</p>
     <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete this recipe</button>
-    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#recipeModal">
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#update-modal">
       Update this recipe
     </button>
     <!-- Modal -->
-
-    <div class="modal fade update-modal" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade" id="update-modal" aria-labelledby="recipeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="recipeModalLabel">Updating an existing recipe?</h5>
@@ -27,7 +28,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="update-recipe-forms form" data-id="{{recipe._id}}">
+            <form class="update-recipe-forms form" id="recipeModal" data-id="{{recipe._id}}">
               <input name="recipe[ingredient]" type="text" placeholder="ingredient">
               <input name="recipe[temperature]" type="number" placeholder="temperature in &deg F">
               <input name="recipe[time]" type="number" placeholder="time in hours">

@@ -12,9 +12,11 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>barbeQuery</h1>
-      <p id="message">Sign up, but do not use your real email/password combination!</p>
-      <p id="message-2"></p>
+      <div id="title">
+        <h1>barbeQuery</h1>
+        <p id="message">Sign up, but do not use your real email/password combination!</p>
+        <p id="message-2"></p>
+    </div>
       <div id="unauthenticated">
         <form id="sign-up" class="form">
           <input name="credentials[email]" type="text" placeholder="email">
@@ -48,13 +50,17 @@
         </form>
 
         <h3>Want to see existing recipes?</h3>
-        <form id="get-recipes" class="form">
-          <button id="getRecipesButton" class="btn btn-dark mr-2">Get recipes!</button>
+        <form id="get-one-recipe" class="form">
+          <input name="recipe[ID]" type="text" placeholder="ID">
+          <button type="submit" id="getOneRecipeButton" class="btn btn-dark mr-2">Get this recipe!</button>
         </form>
-        <main>
-          <div id="content" class="content"></div>
 
-        </main>
+        <form id="get-recipes" class="form">
+          <button id="getRecipesButton" class="btn btn-dark mr-2">Get all recipes!</button>
+        </form>
       </div>
+      <main>
+        <div id="content" class="content"></div>
+      </main>
     </body>
 </html>

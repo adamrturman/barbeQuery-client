@@ -2,6 +2,9 @@
 
 const store = require('../store')
 
+$('#authenticated').hide()
+$('#unauthenticated').show()
+
 const signUpSuccess = function (response) {
   $('#message').text('You are signed up!')
   $('form').trigger('reset')

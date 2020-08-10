@@ -3,14 +3,19 @@
 const showRecipesTemplate = require('../templates/recipe-posting.handlebars')
 
 const getRecipesSuccess = (data) => {
-  console.log(data.recipes)
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').html(showRecipesHtml)
   $('#message').text('Here are your recipes!')
 }
 
+const getOneRecipeSuccess = (data) => {
+    console.log(data)
+    const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
+    $('.content').text(showRecipesHtml)
+}
+
 const createRecipesSuccess = (data) => {
-  console.log(data)
+
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').text(showRecipesHtml)
   $('#message-2').text('You created a recipe!')
@@ -33,7 +38,7 @@ const deleteRecipeFailure = (id) => {
 const updateRecipesSuccess = (id) => {
   $('#message-2').text('You updated a recipe!')
   $('form').trigger('reset')
-  $('#update-modal').modal('hide')
+//  $('#update-modal').modal('hide')
 }
 
 const updateRecipesFailure = () => {
@@ -47,6 +52,7 @@ const failure = (error) => {
 
 module.exports = {
   getRecipesSuccess,
+  getOneRecipeSuccess,
   createRecipesSuccess,
   createRecipesFailure,
   deleteRecipesSuccess,
