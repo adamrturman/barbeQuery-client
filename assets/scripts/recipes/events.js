@@ -15,7 +15,7 @@ const onGetOneRecipe = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData.recipe.ID)
+  console.log(formData)
 
   api.getOneRecipe(formData.recipe.ID)
     .then(ui.getOneRecipeSuccess)
