@@ -5,3 +5,42 @@
   display: none;
   padding: 20px
 }
+
+
+
+body {
+
+  background-color: grey;
+  //background: grey($info, 50%);
+  min-height: 100vh;
+  padding: 5rem 0 1rem;
+}
+
+main {
+  @include make-container;
+
+
+  section {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  //  background: $white;
+
+  background: url('public/wood-2.jpeg') no-repeat center center;
+  background-size: cover;
+    border: 1px solid;
+    cursor: pointer;
+    margin: 10px;
+    outline: none;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+  }
+}

@@ -16,5 +16,5 @@ $(() => {
   $('#get-recipes').on('submit', recipeEvents.onGetRecipes)
   $('#create-recipes').on('submit', recipeEvents.onCreateRecipes)
   $('.content').on('click', '.delete-recipe', recipeEvents.onDeleteRecipe)
-  $('.content').on('click', '.update-recipte', recipeEvents.onUpdateRecipe)
+  $('.content').on('submit', '.update-recipe-forms', recipeEvents.onUpdateRecipe)
 })

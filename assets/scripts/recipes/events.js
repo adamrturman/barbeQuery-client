@@ -25,7 +25,6 @@ const onCreateRecipes = (event) => {
 
 const onDeleteRecipe = (event) => {
   event.preventDefault()
-  console.log(event.target)
   const recipeId = $(event.target).data('id')
   console.log(recipeId)
   api.deleteRecipes(recipeId)
@@ -38,11 +37,13 @@ const onDeleteRecipe = (event) => {
 
 const onUpdateRecipe = (event) => {
   event.preventDefault()
-  const recipeId = $(event.target).data('id')
-  console.log(event.target) // this is the form
+//  const recipeId = $(event.target).data('id')
+  const recipeId = $(event.target).closest('#update-recipe-forms').data('id')
+  console.log(recipeId)
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData) //  this is the recipe, but no owner or id
+  console.log(formData)
+  console.log(event.target)
   api.updateRecipes(formData, recipeId)
     .then(ui.updateRecipesSuccess)
     .then(function () {
