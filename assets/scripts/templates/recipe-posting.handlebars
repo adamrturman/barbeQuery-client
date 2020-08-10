@@ -1,16 +1,16 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
   <section>
-    <h6 class="text-dark">Ingredient:</h6>
-    <p class="text-muted">{{recipe.ingredient}}</p>
-    <h6>Temperature in &deg F:</h6>
-    <p class="text-muted">{{recipe.temperature}}</p>
-    <h6>Time in hours:</h6>
-    <p class="text-muted">{{recipe.time}}</p>
-    <h6>Fuel source:</h6>
-    <p class="text-muted">{{recipe.fuel}}</p>
-    <h6>Directions:</h6>
-    <p class="text-muted">{{recipe.directions}}</p>
+    <h6 class="font-weight-bold text-center">Ingredient:</h6>
+    <p class="font-weight-normal">{{recipe.ingredient}}</p>
+    <h6 class="font-weight-bold">Temperature in &deg F:</h6>
+    <p class="font-weight-normal">{{recipe.temperature}}</p>
+    <h6 class="font-weight-bold">Time in hours:</h6>
+    <p class="font-weight-normal">{{recipe.time}}</p>
+    <h6 class="font-weight-bold">Fuel source:</h6>
+    <p class="font-weight-normal">{{recipe.fuel}}</p>
+    <h6 class="font-weight-bold">Directions:</h6>
+    <p class="font-italic">{{recipe.directions}}</p>
     <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete this recipe</button>
     <!-- Modal -->
     <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
