@@ -33,6 +33,7 @@ const deleteRecipeFailure = (id) => {
 const updateRecipesSuccess = (id) => {
   $('#message-2').text('You updated a recipe!')
   $('form').trigger('reset')
+  $('#update-modal').modal('hide')
 }
 
 const updateRecipesFailure = () => {

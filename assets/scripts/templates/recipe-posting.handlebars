@@ -1,7 +1,7 @@
 {{#each recipes as |recipe|}}
   {{log recipe}}
   <section>
-    <h6 class="font-weight-bold text-center">Ingredient:</h6>
+    <h6 class="font-weight-bold">Ingredient:</h6>
     <p class="font-weight-normal">{{recipe.ingredient}}</p>
     <h6 class="font-weight-bold">Temperature in &deg F:</h6>
     <p class="font-weight-normal">{{recipe.temperature}}</p>
@@ -12,37 +12,38 @@
     <h6 class="font-weight-bold">Directions:</h6>
     <p class="font-italic">{{recipe.directions}}</p>
     <button type="click" data-id="{{recipe._id}}" class="btn btn-danger delete-recipe">Delete this recipe</button>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#recipeModal">
+      Update this recipe
+    </button>
     <!-- Modal -->
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal fade update-modal" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Updating an existing recipe?</h5>
+            <h5 class="modal-title" id="recipeModalLabel">Updating an existing recipe?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body"> -->
+          <div class="modal-body">
             <form class="update-recipe-forms form" data-id="{{recipe._id}}">
               <input name="recipe[ingredient]" type="text" placeholder="ingredient">
               <input name="recipe[temperature]" type="number" placeholder="temperature in &deg F">
               <input name="recipe[time]" type="number" placeholder="time in hours">
               <input name="recipe[fuel]" type="text" placeholder="fuel source">
               <input name="recipe[directions]" type="text" placeholder="directions">
-              <button type="submit" class="btn btn-info">Save changes</button>
+              <button type="submit" data-toggle="modal" data-target="#update-modal" class="btn btn-success">Save changes</button>
             </form>
-          <!-- </div>
-          <! <div class="modal-footer">
+          </div>
+          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" data-id="recipe._id" class="btn btn-primary update-recipe">Save changes</button>
-            <button type="click" data-id="{{recipe._id}}" class="btn btn-danger update-recipe">Update recipe</button>
-          </div> -->
-        <!-- </div>
+          </div>
+        </div>
       </div>
-    </div> -->
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-      Update this recipe
-    </button> -->
+    </div>
+
+
   </section>
 
 {{/each}}

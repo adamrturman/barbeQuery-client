@@ -20,22 +20,22 @@
           <input name="credentials[email]" type="text" placeholder="email">
           <input name="credentials[password]" type="password" placeholder="password">
           <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-          <button type="submit">Sign up!</button>
+          <button type="submit" class="btn btn-dark mr-2">Sign up!</button>
         </form>
         <form id="sign-in" class="form">
           <input name="credentials[email]" type="text" placeholder="email">
           <input name="credentials[password]" type="password" placeholder="password">
-          <button type="submit">Sign in!</button>
+          <button type="submit" class="btn btn-dark mr-2">Sign in!</button>
         </form>
       </div>
       <div id="authenticated">
         <form id="change-password" class="form">
           <input name="passwords[old]" type="password" placeholder="old password">
           <input name="passwords[new]" type="password" placeholder="new password">
-          <button type="submit">Change password</button>
+          <button type="submit" class="btn btn-dark mr-2">Change password</button>
         </form>
         <form id="sign-out" class="button">
-          <button type="submit">Sign out!</button>
+          <button type="submit" class="btn btn-dark mr-2">Sign out!</button>
         </form>
         <h3>Making a new recipe?</h3>
         <form id="create-recipes" class="form">
@@ -44,12 +44,12 @@
           <input name="recipe[time]" type="number" placeholder="time in hours">
           <input name="recipe[fuel]" type="text" placeholder="fuel source">
           <input name="recipe[directions]" type="text" placeholder="directions">
-          <button id="createRecipesButton" class="btn btn-info mr-2">Create a recipe!</button>
+          <button id="createRecipesButton" class="btn btn-dark mr-2">Create a recipe!</button>
         </form>
 
         <h3>Want to see existing recipes?</h3>
         <form id="get-recipes" class="form">
-          <button id="getRecipesButton" class="btn btn-info mr-2">Get recipes!</button>
+          <button id="getRecipesButton" class="btn btn-dark mr-2">Get recipes!</button>
         </form>
         <main>
           <div id="content" class="content"></div>

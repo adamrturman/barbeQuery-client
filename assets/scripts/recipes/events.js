@@ -26,7 +26,6 @@ const onCreateRecipes = (event) => {
 const onDeleteRecipe = (event) => {
   event.preventDefault()
   const recipeId = $(event.target).data('id')
-  console.log(recipeId)
   api.deleteRecipes(recipeId)
     .then(ui.deleteRecipesSuccess)
     .then(function () {
@@ -37,13 +36,9 @@ const onDeleteRecipe = (event) => {
 
 const onUpdateRecipe = (event) => {
   event.preventDefault()
-//  const recipeId = $(event.target).data('id')
   const recipeId = $(event.target).closest('.update-recipe-forms').data('id')
-  console.log('update: ', recipeId)
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
-  console.log(event.target)
   api.updateRecipes(formData, recipeId)
     .then(ui.updateRecipesSuccess)
     .then(function () {
