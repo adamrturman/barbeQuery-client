@@ -8,11 +8,6 @@ const getRecipesSuccess = (data) => {
   $('#message').text('Here are your recipes!')
 }
 
-const getOneRecipeSuccess = (data) => {
-    const showRecipesHtml = showRecipesTemplate({ recipes: data.recipe })
-    $('.content').html(showRecipesHtml)
-}
-
 const createRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').text(showRecipesHtml)
@@ -36,7 +31,8 @@ const deleteRecipeFailure = (id) => {
 const updateRecipesSuccess = (id) => {
   $('#message-2').text('You updated a recipe!')
   $('form').trigger('reset')
-  $('#update-modal').modal('hide')
+  //$('#update-modal').modal('hide')
+  $('.modal-backdrop').remove()
 }
 
 const updateRecipesFailure = () => {
@@ -50,7 +46,6 @@ const failure = (error) => {
 
 module.exports = {
   getRecipesSuccess,
-  getOneRecipeSuccess,
   createRecipesSuccess,
   createRecipesFailure,
   deleteRecipesSuccess,

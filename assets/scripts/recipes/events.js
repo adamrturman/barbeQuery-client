@@ -11,17 +11,6 @@ const onGetRecipes = (event) => {
     .catch(ui.failure)
 }
 
-const onGetOneRecipe = (event) => {
-  event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  console.log(formData)
-
-  api.getOneRecipe(formData.recipe.ID)
-    .then(ui.getOneRecipeSuccess)
-    .catch(ui.failure)
-}
-
 const onCreateRecipes = (event) => {
   event.preventDefault()
   const form = event.target
@@ -60,7 +49,6 @@ const onUpdateRecipe = (event) => {
 
 module.exports = {
   onGetRecipes,
-  onGetOneRecipe,
   onCreateRecipes,
   onDeleteRecipe,
   onUpdateRecipe
