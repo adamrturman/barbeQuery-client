@@ -32,6 +32,7 @@ const changePasswordSuccess = function (response) {
 
 const changePasswordFailure = function (response) {
   $('#message').text('You did not change your password!')
+  $('#message-2').text('')
 }
 
 const signOutSuccess = function () {

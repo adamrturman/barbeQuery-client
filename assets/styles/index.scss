@@ -2,8 +2,20 @@
 
 #title {
   text-align: center;
+  color: $yellow;
 }
 
+.modal-body {
+  background: url('public/fire.jpeg') no-repeat center;
+}
+
+.modal-header {
+  background-image: linear-gradient(to left, #F5F7FA, #a7a9aa);
+}
+
+.modal-footer {
+  background-image: linear-gradient(to right, #F5F7FA, #a7a9aa);
+}
 
 #unauthenticated {
   align-items: center;
@@ -33,7 +45,7 @@ body {
   min-height: 100vh;
   padding: 5rem 0 1rem;
   color: #F5F5F5;
-  text-shadow: 2px 2px rgba(0 , 0, 0, .25);
+  text-shadow: 1px 1px rgba(0 , 0, 0, .25);
   display: flex;
   flex-direction: column;
 }
@@ -58,7 +70,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('public/wood-2.jpeg') no-repeat center center;
+  background: url('public/wood-5.jpg') no-repeat center center;
   background-size: cover;
     border: 1px solid;
     cursor: pointer;
