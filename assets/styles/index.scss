@@ -2,7 +2,9 @@
 
 #title {
   text-align: center;
-  color: $white;
+  color: #ffbb33;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .modal-body {
