@@ -36,8 +36,8 @@ const onDeleteRecipe = (event) => {
 
 const onUpdateRecipe = (event) => {
   event.preventDefault()
+  const recipeId = $(event.target).closest('.update-recipe-forms').data('id')
   const form = event.target
-  const recipeId = $(form).data('id')
   const formData = getFormFields(form)
   api.updateRecipes(formData, recipeId)
     .then(ui.updateRecipesSuccess)

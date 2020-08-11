@@ -5,7 +5,6 @@ const showRecipesTemplate = require('../templates/recipe-posting.handlebars')
 const getRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').html(showRecipesHtml)
-  $("body").removeAttr('class')
   $('#message').text('Here are your recipes!')
 }
 
@@ -32,7 +31,7 @@ const deleteRecipeFailure = (id) => {
 const updateRecipesSuccess = (id) => {
   $('#message-2').text('You updated a recipe!')
   $('form').trigger('reset')
-  $('.modal').modal('hide')
+  $('#update-modal').modal('hide')
   $('.modal-backdrop').remove()
 }
 
