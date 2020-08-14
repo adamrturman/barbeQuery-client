@@ -9,20 +9,11 @@ your own if you find a better variation!
 ## Important Links
 
 - [Other Repo](https://github.com/adamrturman/barbeQuery-api)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Deployed API](https://nameless-anchorage-32520.herokuapp.com)
+- [Deployed Client](https://adamrturman.github.io/barbeQuery-client/)
 
 ## Planning Story & Problem Solving
 The first thing I did to plan for the project was to "plan with the end in mind": create a timeline that worked in reverse from my goal.
-
-
-As I began tackling the requirements, I would try to connect the task at
-hand to a previous lesson and refer back to that code as a basis. This
-process allowed me to set up the user authenication. I ran into more
-difficulty when it came to making the API calls for the game itself. It
-was a slower learning curve for me as I navigated these questions:
-* What data is needed from the store to complete the next step?
-* How do I access the data needed from the store.js file?
 
 When I encountered a problem, my first step was to look in the documentation.
 If I couldn't find clarity to move forward, I would check the issue queue.
@@ -31,10 +22,7 @@ this problem? If I couldn't make the connection that way, I would frame my
 question in the most detailed way possible, sometimes answering my own
 question in the process and post an issue. Sometimes I tried to tackle too many things at
 once and didn't realize there was a common error.
-I was able to work through the logic for the game ending in a win or a tie
-and all of the subsequent messaging independently. I wrote a lot of
-pseudocode to frame those code blocks and I would insert frequent
-console.log's to test what I had just written.
+
 
 
 ### User Stories
