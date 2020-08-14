@@ -17,7 +17,7 @@ const createRecipesSuccess = (data) => {
 }
 
 const createRecipesFailure = (data) => {
-  $('#message').text('Double check your recipe and try again!')
+  $('#message').text('Double check your recipe and try again! Temperture should be between 180-350ºF. Time should be between 2 and 24 hours.')
 }
 
 const deleteRecipesSuccess = (id) => {
