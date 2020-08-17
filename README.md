@@ -8,7 +8,7 @@ your own if you find a better variation!
 
 ## Important Links
 
-- [Other Repo](https://github.com/adamrturman/barbeQuery-api)
+- [API Repository](https://github.com/adamrturman/barbeQuery-api)
 - [Deployed API](https://nameless-anchorage-32520.herokuapp.com)
 - [Deployed Client](https://adamrturman.github.io/barbeQuery-client/)
 
