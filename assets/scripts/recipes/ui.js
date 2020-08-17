@@ -5,7 +5,7 @@ const showRecipesTemplate = require('../templates/recipe-posting.handlebars')
 const getRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').html(showRecipesHtml)
-  $("body").removeAttr('class')
+  $('body').removeAttr('class')
   $('#message').text('Here are your recipes!')
 }
 
