@@ -8,7 +8,7 @@ const getRecipesSuccess = (data) => {
   $('body').removeAttr('class')
   $('#message-2').text('')
   if (data.recipes.length === 0) {
-    $('#message').text('You do not have any recipes yet! Create one first!')
+    $('#message').text('You do not have any recipes yet! Create one!')
   } else {
     $('#message').text('Here are your recipes!')
   }
