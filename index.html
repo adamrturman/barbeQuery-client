@@ -32,7 +32,7 @@
         </form>
       </div>
       <div id="authenticated">
-        <form id="change-password" class="form">
+        <form style="display:flex" id="change-password" class="form">
           <input name="passwords[old]" type="password" placeholder="old password">
           <input name="passwords[new]" type="password" placeholder="new password">
           <button type="submit" class="btn btn-dark mr-2">Change password</button>
@@ -41,12 +41,12 @@
           <button type="submit" class="btn btn-dark mr-2">Sign out!</button>
         </form>
         <h3>Making a new recipe?</h3>
-        <form id="create-recipes" class="form">
+        <form style="display:flex" id="create-recipes" class="form">
           <input name="recipe[ingredient]" type="text" placeholder="ingredient">
-          <input name="recipe[temperature]" type="number" placeholder="temperature in &deg F">
-          <input name="recipe[time]" type="number" placeholder="time in hours">
-          <input name="recipe[fuel]" type="text" placeholder="fuel source">
-          <input name="recipe[directions]" type="text" placeholder="directions">
+          <input name="recipe[temperature]" type="number" style="min-width:20%" min="180" max="350" placeholder="temperature in &deg F">
+          <input name="recipe[time]" type="number" style="min-width:15%" min="2" max="24"placeholder="time in hours">
+          <input name="recipe[fuel]" type="text" style="min-width:5px" placeholder="fuel source">
+          <input name="recipe[directions]" type="text" style="min-width:10%" placeholder="directions">
           <button id="createRecipesButton" class="btn btn-warning mr-2">Create a recipe!</button>
         </form>
         <h3>Want to see existing recipes?</h3>
