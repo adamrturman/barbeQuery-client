@@ -6,7 +6,12 @@ const getRecipesSuccess = (data) => {
   const showRecipesHtml = showRecipesTemplate({ recipes: data.recipes })
   $('.content').html(showRecipesHtml)
   $('body').removeAttr('class')
-  $('#message').text('Here are your recipes!')
+  $('#message-2').text('')
+  if (data.recipes.length === 0) {
+    $('#message').text('You do not have any recipes yet! Create one first!')
+  } else {
+    $('#message').text('Here are your recipes!')
+  }
 }
 
 const createRecipesSuccess = (data) => {
@@ -22,7 +27,7 @@ const createRecipesFailure = (data) => {
 
 const deleteRecipesSuccess = (id) => {
   $(`[data-id='${id}']`).remove()
-  $('#message-2').text('You deleted a recipe!')
+  $('#message').text('You deleted a recipe!')
 }
 
 const deleteRecipeFailure = (id) => {
