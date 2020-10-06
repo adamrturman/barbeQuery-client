@@ -12,6 +12,12 @@ your own if you find a better variation!
 - [Deployed API](https://nameless-anchorage-32520.herokuapp.com)
 - [Deployed Client](https://adamrturman.github.io/barbeQuery-client/)
 
+## Set Up Instructions
+- Fork and clone this repository.
+- Once inside the direcotry, install dependencies with `npm install`.
+- Run the development server with `grunt serve`.
+- The application will run on `http://localhost:7165/` in the browser.
+
 ## Planning Story & Problem Solving
 The first thing I did to plan for the project was to "plan with the end in mind": create a timeline that worked in reverse from my goal.
 
