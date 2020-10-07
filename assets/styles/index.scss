@@ -64,3 +64,55 @@ p {
   justify-content: center;
   position: relative;
 }
+
+#authenticated {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+body {
+  background: url('public/smoke-2.jpg') no-repeat center center;
+  background-size: cover;
+  color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Anton';
+  min-height: 100vh;
+  padding: 5rem 0 1rem;
+  text-shadow: 1px 1px rgba(0 , 0, 0, .25);
+}
+
+main {
+  @include make-container;
+  align-content: center;
+
+  section {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(12);
+    }
+    align-items: center;
+    background: url('public/wood-5.jpg') no-repeat center center;
+    background-size: cover;
+    border: 1px solid;
+    color: #323334;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    justify-content: center;
+    outline: none;
+    padding: 2rem;
+    text-shadow: 1px 1px rgba(0 , 0, 0, .25);
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
