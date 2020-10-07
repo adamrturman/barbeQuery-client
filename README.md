@@ -17,6 +17,7 @@ your own if you find a better variation!
 - Once inside the direcotry, install dependencies with `npm install`.
 - Run the development server with `grunt serve`.
 - The application will run on `http://localhost:7165/` in the browser.
+- Build and deploy master branch with `grunt deploy`
 
 ## Planning Story & Problem Solving
 The first thing I did to plan for the project was to "plan with the end in mind": create a timeline that worked in reverse from my goal.
