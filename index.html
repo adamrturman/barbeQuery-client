@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>barbeQuery</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div id="title">
+        <h1>barbeQuery</h1>
+        <p id="message">Sign up, but do not use your real email/password combination.<br/>Also, if you are signing up for the first time, it can take a few seconds for the server to start up.</p>
+        <p id="message-2"></p>
+    </div>
+      <div id="unauthenticated">
+        <form style="display:flex" id="sign-up" class="form">
+          <input name="credentials[email]" type="text" placeholder="email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+          <button type="submit" class="btn btn-dark mr-2">Sign up!</button>
+        </form>
+        <form style="display:flex" id="sign-in" class="form">
+          <input name="credentials[email]" type="text" placeholder="email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <button type="submit" class="btn btn-warning mr-2">Sign in!</button>
+        </form>
+      </div>
+      <div id="authenticated">
+        <form style="display:flex" id="change-password" class="form">
+          <input name="passwords[old]" type="password" placeholder="old password">
+          <input name="passwords[new]" type="password" placeholder="new password">
+          <button type="submit" class="btn btn-dark mr-2">Change password</button>
+        </form>
+        <form id="sign-out" class="button">
+          <button type="submit" class="btn btn-dark mr-2">Sign out!</button>
+        </form>
+        <h3>Making a new recipe?</h3>
+        <form style="display:flex" id="create-recipes" class="form">
+          <input name="recipe[ingredient]" type="text" placeholder="ingredient">
+          <input name="recipe[temperature]" type="number" style="min-width:20%" min="180" max="350" placeholder="temperature in &deg F">
+          <input name="recipe[time]" type="number" style="min-width:20%" min="2" max="24"placeholder="time in hours">
+          <input name="recipe[fuel]" type="text" style="min-width:5px" placeholder="fuel source">
+          <input name="recipe[directions]" type="text" style="min-width:10%" placeholder="directions">
+          <button id="createRecipesButton" class="btn btn-warning mr-2">Create a recipe!</button>
+        </form>
+        <h3>Want to see existing recipes?</h3>
+        <form id="get-recipes" class="form">
+          <button id="getRecipesButton" class="btn btn-warning mr-2">Get all recipes!</button>
+        </form>
+      </div>
+      <main>
+        <div id="content" class="content"></div>
+      </main>
+    </body>
+</html>
